@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>渡邉 実悠 | BUILBASE</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #f0f4f8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0,60,120,0.10);
+      max-width: 400px;
+      width: 100%;
+      overflow: hidden;
+    }
+    .card-header {
+      background: linear-gradient(135deg, #1a56a0 0%, #2d7dd2 100%);
+      padding: 36px 24px 28px;
+      text-align: center;
+      color: #fff;
+    }
+    .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #fff;
+      margin: 0 auto 16px;
+      border: 3px solid rgba(255,255,255,0.5);
+      overflow: hidden;
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+    .name-ja { font-size: 1.5rem; font-weight: bold; letter-spacing: 0.05em; }
+    .name-en { font-size: 0.85rem; opacity: 0.85; margin-top: 4px; letter-spacing: 0.1em; }
+    .title { font-size: 0.9rem; margin-top: 8px; opacity: 0.9; }
+    .company {
+      margin-top: 12px;
+      font-size: 0.8rem;
+      opacity: 0.8;
+      border-top: 1px solid rgba(255,255,255,0.3);
+      padding-top: 10px;
+    }
+    .card-body { padding: 24px; }
+    .contact-list { list-style: none; }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eef2f7;
+      text-decoration: none;
+      color: #222;
+      transition: background 0.15s;
+    }
+    .contact-item:last-child { border-bottom: none; }
+    .contact-item:hover { background: #f5f8ff; border-radius: 8px; }
+    .icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 14px;
+      flex-shrink: 0;
+      font-size: 1.1rem;
+    }
+    .icon-phone { background: #e8f5e9; }
+    .icon-mail { background: #e3f2fd; }
+    .icon-web { background: #e8eaf6; }
+    .icon-fb { background: #e3f0fc; }
+    .icon-line { background: #e8f5e9; }
+    .contact-label { font-size: 0.72rem; color: #888; }
+    .contact-value { font-size: 0.92rem; color: #1a56a0; font-weight: 500; }
+    .save-note {
+      margin: 0 24px 20px;
+      padding: 14px 16px;
+      background: #f7faff;
+      border-radius: 12px;
+      border: 1px solid #dce8f8;
+      font-size: 0.78rem;
+      color: #555;
+      line-height: 1.7;
+    }
+    .save-note p { margin-bottom: 4px; }
+    .footer {
+      text-align: center;
+      padding: 14px;
+      background: #f7faff;
+      font-size: 0.75rem;
+      color: #aaa;
+      border-top: 1px solid #eef2f7;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <div class="avatar">
+        <img id="profile-img" src="" alt="渡邉 実悠">
+        <span id="avatar-initials">渡</span>
+      </div>
+      <div class="name-ja">渡邉 実悠</div>
+      <div class="name-en">MIYU WATANABE</div>
+      <div class="title">施工事業部　マネージャー</div>
+      <div class="company">
+        BUILBASE｜株式会社ビルベイス
+      </div>
+    </div>
+    <div class="card-body">
+      <ul class="contact-list">
+        <li>
+          <a class="contact-item" href="tel:070-7567-6935">
+            <div class="icon icon-phone">📱</div>
+            <div>
+              <div class="contact-label">携帯電話</div>
+              <div class="contact-value">070-7567-6935</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="contact-item" href="mailto:m-watanabe@builbase.com">
+            <div class="icon icon-mail">✉️</div>
+            <div>
+              <div class="contact-label">メール</div>
+              <div class="contact-value">m-watanabe@builbase.com</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="contact-item" href="https://builbase.com/" target="_blank">
+            <div class="icon icon-web">🌐</div>
+            <div>
+              <div class="contact-label">会社ホームページ</div>
+              <div class="contact-value">builbase.com</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="contact-item" href="https://www.facebook.com/share/1A9tAcYUDw/?mibextid=wwXIfr" target="_blank">
+            <div class="icon icon-fb">👤</div>
+            <div>
+              <div class="contact-label">Facebook</div>
+              <div class="contact-value">Facebookを見る</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="contact-item" href="https://works.do/xvFBkKq" target="_blank">
+            <div class="icon icon-line">💬</div>
+            <div>
+              <div class="contact-label">LINE WORKS</div>
+              <div class="contact-value">LINE登録</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="save-note">
+      <p>📌 名刺を残しておきたい場合</p>
+      <p>Phone→各々長押ししていただければ電話帳等に登録することが可能です。</p>
+      <p>後からご登録されたい方→ブックマーク登録下さいませ。</p>
+    </div>
+    <div class="footer">© 株式会社ビルベイス｜BUILBASE</div>
+  </div>
+</body>
+</html>
